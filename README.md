@@ -1,5 +1,5 @@
 ---
-title: AI Synthetic Data Generator
+title: Multimodal AI Synthetic Data Generator
 emoji: 🎭
 colorFrom: blue
 colorTo: purple
