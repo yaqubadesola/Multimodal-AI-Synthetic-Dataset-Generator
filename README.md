@@ -30,8 +30,8 @@ Generate realistic synthetic datasets using multiple AI models via OpenRouter.
 
 ```bash
 # Clone the repository
-git clone https://huggingface.co/spaces/yourusername/ai-synthetic-data-generator
-cd ai-synthetic-data-generator
+git clone https://github.com/yaqubadesola/Multimodal-AI-Synthetic-Data-Generator-
+cd Multimodal-AI-Synthetic-Data-Generator-
 
 # Install dependencies
 pip install -r requirements.txt
@@ -43,29 +43,16 @@ echo "OPENROUTER_API_KEY=your_key_here" > .env
 python app.py
 ```
 
-### Hugging Face Spaces Deployment
+### Render Deployment
 
-1. Upload all files (including app.py, requirements.txt, data_generator_lib.py, README.md) to your Hugging Face Space.
-2. Set `app.py` as the entry point in your Space settings.
-3. Add your `OPENROUTER_API_KEY` as a secret or environment variable in the Space.
-4. The Gradio app and Inference API will be available at your Space URL.
-
-#### Inference API Example
-
-```python
-import requests
-
-API_URL = "https://hf.space/embed/<your-space-id>/api/predict"
-
-payload = {
-    "model_name": "OpenAI (GPT-4o Mini)",
-    "dataset_type": "Customer Records",
-    "size": 10
-}
-response = requests.post(API_URL, json=payload)
-print(response.json())
-```
+1. Push your code to GitHub (already done).
+2. Go to [Render.com](https://render.com/) and create a new Web Service.
+3. Connect your GitHub repository (`yaqubadesola/Multimodal-AI-Synthetic-Data-Generator-`).
+4. Set the start command to `python app.py`.
+5. Add your `OPENROUTER_API_KEY` as an environment variable in Render settings.
+6. Choose a Python environment and build settings as needed.
+7. Deploy! Your Gradio app will be available at your Render URL.
 
 ---
 
-For more details, see Hugging Face Spaces documentation.
+For more details, see Render documentation.

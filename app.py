@@ -205,10 +205,9 @@ def generate_dataset_ui(model_name, dataset_type, size):
     df.to_csv(filename, index=False)
     return df, filename
 
-# Hugging Face Inference API endpoint
-def hf_inference(model_name, dataset_type, size):
+def predict(model_name, dataset_type, size):
     """
-    Hugging Face Inference API endpoint for synthetic data generation.
+    REST API endpoint for Render deployment.
     Returns JSON data.
     """
     df = generator.generate(
@@ -276,8 +275,7 @@ with gr.Blocks(title="AI Synthetic Data Generator", theme=gr.themes.Soft()) as d
 
 if __name__ == "__main__":
     demo.launch(
-        share=False,
         server_name="0.0.0.0",
-        server_port=7860,
+        server_port=int(os.environ.get("PORT", 7860)),
         debug=True
     )
