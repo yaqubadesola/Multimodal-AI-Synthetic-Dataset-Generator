@@ -80,8 +80,8 @@ python app.py
 
 ### API & Integration
 
-- REST endpoint for programmatic data generation
-- Easy integration with ML pipelines, notebooks, and external apps
+- OpenAI client Library
+- Easy integration with ML, LLM Transformer pipelines, notebooks, and external apps
 
 ### Infrastructure & Deployment
 
